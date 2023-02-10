@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="uchBurckhard" class="user.Uchburchak">
+        <constructor-arg index="0" value="4"/>
+        <constructor-arg index="1" value="6"/>
+    </bean>
+
+
+    <bean id="kvadrat" class="user.TortBurchak">
+        <constructor-arg index="0" value="5"/>
+        <constructor-arg index="1" value="5"/>
+    </bean>
+
+
+    <bean id="colc" class="user.Colculate">
+        <constructor-arg ref="kvadrat"/>
+    </bean>
+
+    <bean id="colc2" class="user.Colculate">
+        <constructor-arg ref="uchBurckhard"/>
+    </bean>
+
+</beans>
